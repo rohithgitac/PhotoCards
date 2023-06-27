@@ -5,7 +5,7 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "npm-run-all --parallel server client",
+    "start": "npm-run-all --parallel server build",
     "server": "node server",
     "client": "cd tinder-clone && npm start",
     "build": "cd tinder-clone && npm install react-scripts && npm run build",
