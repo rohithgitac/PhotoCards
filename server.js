@@ -17,7 +17,7 @@ connectDB()
 //Image upload
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-      cb(null, 'tinder-clone/public')
+      cb(null, './tinder-clone/public')
     },
     filename: (req, file, cb) => {
       cb(null, file.originalname)
@@ -34,10 +34,8 @@ app.post('/tinder/cards',async(req,res)=>{
     try {
         
         const userCard = req.body;
-        console.log(req.body)
         const newCard = new Card(userCard)
         const response = await newCard.save()
-        console.log(response)
         res.status(200).send(response)
 
     } catch (error) {
@@ -59,10 +57,8 @@ app.get('/tinder/cards',async(req,res)=>{
 })
 app.delete('/tinder/cards/:id', async(req,res) => {
     try {
-        console.log(req.params.id)
         const deleteId = req.params.id;
         const resultCard = await Card.deleteOne({_id:deleteId})
-        console.log(resultCard)
         res.status(200).json(resultCard)
     } catch (error) {
         console.log(error)
