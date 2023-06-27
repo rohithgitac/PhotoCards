@@ -1,0 +1,24 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/tinder-clone/node_modules
+/node_modules
+/tinder-clone/.pnp
+/tinder-clone/.pnp.js
+
+# testing
+/tinder-clone/coverage
+
+# production
+/tinder-clone/build
+
+# misc
+/tinder-clone/.DS_Store
+/tinder-clone/.env.local
+/tinder-clone/.env.development.local
+/tinder-clone/.env.test.local
+/tinder-clone/.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
