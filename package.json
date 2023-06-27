@@ -8,7 +8,7 @@
     "start": "npm-run-all --parallel server client",
     "server": "node server",
     "client": "cd tinder-clone && npm start",
-    "build": "npm install cd tinder-clone && npm run build",
+    "build": "cd tinder-clone && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "rohith AB",
