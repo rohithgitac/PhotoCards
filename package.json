@@ -5,10 +5,10 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "start": "npm-run-all --parallel server build",
+    "start": "npm-run-all --parallel server client",
     "server": "node server",
     "client": "cd tinder-clone && npm start",
-    "build": "cd tinder-clone && npm install react-scripts && npm run build",
+    "buildFront": "cd tinder-clone && npm install react-scripts && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "rohith AB",
